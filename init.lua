@@ -33,6 +33,7 @@ require('lazy').setup {
   require 'plugins.ai',
   require 'plugins.vista',
   require 'plugins.oil',
+  require 'plugins.telescope-godoc',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
