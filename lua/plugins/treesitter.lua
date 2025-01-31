@@ -34,6 +34,7 @@ return { -- Highlight, edit, and navigate code
       'c',
       'rust',
       'zig',
+      'jsonnet',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
