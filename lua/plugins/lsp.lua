@@ -188,6 +188,7 @@ return {
       terraformls = {},
       jsonls = {},
       yamlls = {},
+      jsonnet_ls = {},
 
       lua_ls = {
         -- cmd = {...},
