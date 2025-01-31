@@ -164,6 +164,14 @@ return {
       -- But for many setups, the LSP (`tsserver`) will work just fine
       -- ts_ls = {}, -- tsserver is deprecated
       ruff = {},
+      zls = {
+        filetypes = { 'zig', 'zon' },
+        settings = {
+          zls = {
+            enable_snippets = true,
+          },
+        },
+      },
       pylsp = {
         settings = {
           pylsp = {
