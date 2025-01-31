@@ -15,4 +15,18 @@ return {
     -- (see :h highlight-group for options)
     highlight_group = 'CursorLine',
   },
+  config = function()
+    -- TODO: need more good keymaps
+    -- movement
+    vim.keymap.set({ 'n', 'v' }, 'gk', '<cmd>Treewalker Up<cr>', { silent = true })
+    vim.keymap.set({ 'n', 'v' }, 'gj', '<cmd>Treewalker Down<cr>', { silent = true })
+    vim.keymap.set({ 'n', 'v' }, 'gh', '<cmd>Treewalker Left<cr>', { silent = true })
+    vim.keymap.set({ 'n', 'v' }, 'gl', '<cmd>Treewalker Right<cr>', { silent = true })
+
+    -- swapping
+    vim.keymap.set('n', 'gsk', '<cmd>Treewalker SwapUp<cr>', { silent = true })
+    vim.keymap.set('n', 'gsj', '<cmd>Treewalker SwapDown<cr>', { silent = true })
+    vim.keymap.set('n', 'gsh', '<cmd>Treewalker SwapLeft<cr>', { silent = true })
+    vim.keymap.set('n', 'gsl', '<cmd>Treewalker SwapRight<cr>', { silent = true })
+  end,
 }
