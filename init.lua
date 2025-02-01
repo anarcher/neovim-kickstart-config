@@ -34,6 +34,7 @@ require('lazy').setup {
   require 'plugins.vista',
   require 'plugins.oil',
   require 'plugins.aerial',
+  require 'plugins.colortheme-melange',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
