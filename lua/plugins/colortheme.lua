@@ -12,7 +12,7 @@ return {
     vim.g.nord_bold = false
 
     -- Load the colorscheme
-    require('nord').set()
+    -- require('nord').set()
 
     -- Toggle background transparency
     local bg_transparent = true
