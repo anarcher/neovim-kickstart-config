@@ -9,6 +9,9 @@ return {
     require('ai').setup {
       -- provider = 'anthropic',
       provider = 'gemini',
+      gemini = {
+        model = 'gemini-2.0-flash-001',
+      },
     }
   end,
 }
