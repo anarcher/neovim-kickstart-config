@@ -8,6 +8,7 @@ return {
   config = function()
     require('ai').setup {
       provider = 'anthropic',
+      -- provider = 'gemini',
     }
   end,
 }
