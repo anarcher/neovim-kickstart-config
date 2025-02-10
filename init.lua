@@ -35,6 +35,7 @@ require('lazy').setup {
   require 'plugins.oil',
   require 'plugins.aerial',
   require 'plugins.colortheme-melange',
+  require 'plugins.neotest',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
