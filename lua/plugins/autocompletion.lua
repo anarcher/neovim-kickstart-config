@@ -156,6 +156,8 @@ return { -- Autocompletion
         { name = 'luasnip' },
         { name = 'buffer' },
         { name = 'path' },
+        { name = 'supermaven' },
+        -- { name = "codeium" }
       },
       formatting = {
         fields = { 'kind', 'abbr', 'menu' },

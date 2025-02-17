@@ -37,7 +37,8 @@ require('lazy').setup {
   require 'plugins.colortheme-melange',
   require 'plugins.neotest',
   require 'plugins.jsonnet',
-  require 'plugins.codeium',
+  -- require 'plugins.codeium', uses supermaven
+  require 'plugins.supermaven',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
