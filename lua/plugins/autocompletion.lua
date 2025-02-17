@@ -66,6 +66,7 @@ return { -- Autocompletion
       Event = '',
       Operator = '󰆕',
       TypeParameter = '󰊄',
+      Supermaven = ' ',
     }
     cmp.setup {
       snippet = {
@@ -157,7 +158,7 @@ return { -- Autocompletion
         { name = 'buffer' },
         { name = 'path' },
         { name = 'supermaven' },
-        -- { name = "codeium" }
+        { name = 'codeium' },
       },
       formatting = {
         fields = { 'kind', 'abbr', 'menu' },
@@ -168,6 +169,8 @@ return { -- Autocompletion
             luasnip = '[Snippet]',
             buffer = '[Buffer]',
             path = '[Path]',
+            supermaven = '[SuperMaven]',
+            codeium = '[Codeium]',
           })[entry.source.name]
           return vim_item
         end,
