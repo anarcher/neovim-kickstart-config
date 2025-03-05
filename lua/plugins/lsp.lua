@@ -172,6 +172,15 @@ return {
           },
         },
       },
+      ols = {
+        filetypes = { 'odin' },
+        -- You can customize settings if needed
+        settings = {
+          ols = {
+            -- Add any specific settings for Odin LSP here
+          }
+        }
+      },
       pylsp = {
         settings = {
           pylsp = {

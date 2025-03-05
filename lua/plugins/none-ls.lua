@@ -19,6 +19,7 @@ return {
         'checkmake', -- linter for Makefiles
         'ruff', -- Python linter and formatter
         'gofumpt', -- Go formatter
+        -- OLS handles formatting for Odin files
       },
       automatic_installation = true,
     }
