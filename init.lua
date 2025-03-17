@@ -29,7 +29,8 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.comment',
-  require 'plugins.gopher',
+  -- require 'plugins.gopher', uses go.vim
+  require 'plugins.go-nvim',
   require 'plugins.ai',
   require 'plugins.vista',
   require 'plugins.oil',
@@ -39,6 +40,7 @@ require('lazy').setup {
   require 'plugins.jsonnet',
   -- require 'plugins.codeium', uses supermaven
   require 'plugins.supermaven',
+  require 'plugins.treesitter-context',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
