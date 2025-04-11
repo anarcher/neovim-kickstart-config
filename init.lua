@@ -41,6 +41,7 @@ require('lazy').setup {
   -- require 'plugins.codeium', uses supermaven
   require 'plugins.supermaven',
   require 'plugins.treesitter-context',
+  require 'plugins.texpresso',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
