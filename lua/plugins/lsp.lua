@@ -197,6 +197,7 @@ return {
           },
         },
       },
+      helm_ls = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {},
