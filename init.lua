@@ -42,6 +42,8 @@ require('lazy').setup {
   require 'plugins.supermaven',
   require 'plugins.treesitter-context',
   require 'plugins.texpresso',
+  -- require 'plugins.vgit', instead use neogit
+  require 'plugins.neogit',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
