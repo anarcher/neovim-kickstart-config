@@ -30,7 +30,8 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.comment',
   -- require 'plugins.gopher', uses go.vim
-  require 'plugins.go-nvim',
+  -- require 'plugins.go-nvim', uses vim-go
+  require 'plugins.vim-go',
   require 'plugins.ai',
   require 'plugins.vista',
   require 'plugins.oil',
@@ -44,6 +45,7 @@ require('lazy').setup {
   require 'plugins.texpresso',
   -- require 'plugins.vgit', instead use neogit
   require 'plugins.neogit',
+  require 'plugins.tagbar',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
