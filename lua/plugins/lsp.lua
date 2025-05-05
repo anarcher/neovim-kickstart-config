@@ -178,8 +178,8 @@ return {
         settings = {
           ols = {
             -- Add any specific settings for Odin LSP here
-          }
-        }
+          },
+        },
       },
       pylsp = {
         settings = {
@@ -207,6 +207,7 @@ return {
       jsonls = {},
       yamlls = {},
       jsonnet_ls = {},
+      templ = {},
 
       lua_ls = {
         -- cmd = {...},
