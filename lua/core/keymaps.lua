@@ -73,3 +73,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Unix timestamp insert
+vim.keymap.set('n', '<Leader>ti', function()
+  local timestamp = os.time()
+  vim.api.nvim_put({ tostring(timestamp) }, 'c', true, true)
+end, { desc = 'Insert Unix timestamp' })
