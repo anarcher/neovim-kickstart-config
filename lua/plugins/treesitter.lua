@@ -20,6 +20,7 @@ return { -- Highlight, edit, and navigate code
       'java',
       'groovy',
       'go',
+      'gotmpl',
       'gitignore',
       'graphql',
       'yaml',
