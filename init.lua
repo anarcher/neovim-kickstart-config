@@ -46,6 +46,7 @@ require('lazy').setup {
   -- require 'plugins.vgit', instead use neogit
   require 'plugins.neogit',
   require 'plugins.tagbar',
+  require 'plugins.helm-ls',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
