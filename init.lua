@@ -1,5 +1,5 @@
-require 'core.options' -- Load general options
-require 'core.keymaps' -- Load general keymaps
+require 'core.options'  -- Load general options
+require 'core.keymaps'  -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
 -- Set up the Lazy plugin manager
@@ -47,6 +47,7 @@ require('lazy').setup {
   require 'plugins.neogit',
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
+  require 'plugins.claude-code',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
