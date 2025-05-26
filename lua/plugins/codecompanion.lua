@@ -20,12 +20,25 @@ return {
       strategies = {
         chat = {
           adapter = 'gemini',
+          keymaps = {
+            close = {
+              modes = {
+                n = '<C-q>',
+                i = '<C-q>',
+              },
+            },
+          },
         },
         inline = {
           adapter = 'gemini',
         },
         cmd = {
           adapter = 'gemini',
+        },
+      },
+      extensions = {
+        history = {
+          enabled = true,
         },
       },
     }
