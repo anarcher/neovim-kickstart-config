@@ -1,5 +1,5 @@
-require 'core.options'  -- Load general options
-require 'core.keymaps'  -- Load general keymaps
+require 'core.options' -- Load general options
+require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
 
 -- Set up the Lazy plugin manager
@@ -32,7 +32,8 @@ require('lazy').setup {
   -- require 'plugins.gopher', uses go.vim
   -- require 'plugins.go-nvim', uses vim-go
   require 'plugins.vim-go',
-  require 'plugins.ai',
+  --  require 'plugins.ai', uses codecompanion
+  require 'plugins.codecompanion',
   require 'plugins.vista',
   require 'plugins.oil',
   require 'plugins.aerial',
