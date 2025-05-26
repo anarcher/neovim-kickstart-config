@@ -21,6 +21,12 @@ return {
         chat = {
           adapter = 'gemini',
           keymaps = {
+            send = {
+              modes = {
+                n = '<C-s>',
+                i = '<C-s>',
+              },
+            },
             close = {
               modes = {
                 n = '<C-q>',
