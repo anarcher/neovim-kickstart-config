@@ -19,6 +19,7 @@ return {
         'checkmake', -- linter for Makefiles
         'ruff', -- Python linter and formatter
         'gofumpt', -- Go formatter
+        'yamllint', -- YAML linter
         -- OLS handles formatting for Odin files
       },
       automatic_installation = true,
@@ -26,6 +27,7 @@ return {
 
     local sources = {
       diagnostics.checkmake,
+      diagnostics.yamllint,
       formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
