@@ -9,17 +9,19 @@ return {
   config = function()
     require('codecompanion').setup {
       adapters = {
-        gemini = function()
-          return require('codecompanion.adapters').extend('gemini', {
-            env = {
-              api_key = 'GEMINI_API_KEY',
-            },
-          })
-        end,
+        http = {
+          gemini = function()
+            return require('codecompanion.adapters').extend('gemini', {
+              env = {
+                api_key = 'GEMINI_API_KEY',
+              },
+            })
+          end,
+        },
       },
       strategies = {
         chat = {
-          adapter = 'gemini',
+          adapter = 'claude_code',
           keymaps = {
             send = {
               modes = {
@@ -36,10 +38,10 @@ return {
           },
         },
         inline = {
-          adapter = 'gemini',
+          adapter = 'claude_code',
         },
         cmd = {
-          adapter = 'gemini',
+          adapter = 'claude_code',
         },
       },
       extensions = {
