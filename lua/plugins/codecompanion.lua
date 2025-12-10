@@ -25,6 +25,9 @@ return {
       strategies = {
         chat = {
           adapter = 'claude_code',
+          title_generation_opts = {
+            enabled = false,
+          },
           keymaps = {
             send = {
               modes = {
