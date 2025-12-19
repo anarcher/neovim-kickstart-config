@@ -1,10 +1,10 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-  opts = {
-    ensure_installed = {
+  -- Note: nvim-treesitter API changed - highlighting is now via vim.treesitter.start()
+  config = function()
+    -- Install parsers asynchronously
+    require('nvim-treesitter').install({
       'lua',
       'python',
       'javascript',
@@ -37,18 +37,52 @@ return { -- Highlight, edit, and navigate code
       'zig',
       'jsonnet',
       'odin',
-    },
-    -- Autoinstall languages that are not installed
-    auto_install = true,
-    highlight = {
-      enable = true,
-      -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
-      --  If you are experiencing weird indenting issues, add the language to
-      --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-      additional_vim_regex_highlighting = { 'ruby' },
-    },
-    indent = { enable = true, disable = { 'ruby' } },
-  },
+    })
+
+    -- Enable treesitter highlighting for most filetypes
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = {
+        'lua',
+        'python',
+        'javascript',
+        'typescript',
+        'vim',
+        'terraform',
+        'sql',
+        'dockerfile',
+        'toml',
+        'json',
+        'java',
+        'groovy',
+        'go',
+        'yaml',
+        'make',
+        'cmake',
+        'markdown',
+        'bash',
+        'sh',
+        'tsx',
+        'css',
+        'html',
+        'c',
+        'rust',
+        'zig',
+        'jsonnet',
+        'odin',
+      },
+      callback = function()
+        vim.treesitter.start()
+      end,
+    })
+
+    -- Enable treesitter-based indenting for select languages
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = { 'lua', 'python', 'javascript', 'typescript', 'go', 'rust', 'c' },
+      callback = function()
+        vim.bo.indentexpr = 'v:lua.vim.treesitter.indentexpr()'
+      end,
+    })
+  end,
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --

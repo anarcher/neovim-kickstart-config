@@ -1,8 +1,8 @@
 return {
   'olimorris/codecompanion.nvim',
-  -- Pin to v17.33.0 to avoid breaking changes
-  -- See: https://github.com/olimorris/codecompanion.nvim/pull/2439
-  tag = 'v17.33.0',
+  -- Upgraded to v18.2.1 for codecompanion-history.nvim compatibility
+  -- v18.0.0 breaking change: 'strategies' renamed to 'interactions'
+  tag = 'v18.2.1',
   opts = {},
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -22,7 +22,7 @@ return {
           end,
         },
       },
-      strategies = {
+      interactions = {
         chat = {
           adapter = 'claude_code',
           keymaps = {
