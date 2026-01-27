@@ -48,7 +48,7 @@ require('lazy').setup {
   require 'plugins.neogit',
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
-  require 'plugins.claude-code',
+  -- require 'plugins.claude-code', instead use codecompanion
   require 'plugins.code-bridge',
 }
 
