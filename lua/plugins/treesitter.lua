@@ -3,8 +3,10 @@ return { -- Highlight, edit, and navigate code
   build = ':TSUpdate',
   -- Note: nvim-treesitter API changed - highlighting is now via vim.treesitter.start()
   config = function()
-    -- Install parsers asynchronously
-    require('nvim-treesitter').install({
+    -- Install parsers using the correct module
+    local install = require('nvim-treesitter.install')
+    install.prefer_git = false
+    install.ensure_installed({
       'lua',
       'python',
       'javascript',
