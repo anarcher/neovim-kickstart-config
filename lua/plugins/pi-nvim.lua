@@ -1,0 +1,12 @@
+return {
+    'pablopunk/pi.nvim',
+    config = function()
+        require('pi').setup({
+            provider = 'anthropic',
+            model = 'claude-opus-4-6',
+        })
+
+        vim.keymap.set('n', '<leader>ai', ':PiAsk<CR>', { desc = 'Ask pi' })
+        vim.keymap.set('v', '<leader>ai', ':PiAskSelection<CR>', { desc = 'Ask pi (selection)' })
+    end,
+}

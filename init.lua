@@ -32,8 +32,10 @@ require('lazy').setup {
   -- require 'plugins.gopher', uses go.vim
   -- require 'plugins.go-nvim', uses vim-go
   require 'plugins.vim-go',
-  --  require 'plugins.ai', uses codecompanion
-  require 'plugins.codecompanion',
+  -- require 'plugins.ai', uses codecompanion
+  -- require 'plugins.codecompanion', uses pi.nvim
+  -- require 'plugins.claude-code', instead use codecompanion
+  require 'plugins.pi-nvim',
   require 'plugins.vista',
   require 'plugins.oil',
   require 'plugins.aerial',
@@ -48,8 +50,6 @@ require('lazy').setup {
   require 'plugins.neogit',
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
-  -- require 'plugins.claude-code', instead use codecompanion
-  require 'plugins.code-bridge',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
