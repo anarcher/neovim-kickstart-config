@@ -33,7 +33,7 @@ require('lazy').setup {
   -- require 'plugins.go-nvim', uses vim-go
   require 'plugins.vim-go',
   -- require 'plugins.ai', uses codecompanion
-  -- require 'plugins.codecompanion', uses pi.nvim
+  require 'plugins.codecompanion',
   -- require 'plugins.claude-code', instead use codecompanion
   require 'plugins.pi-nvim',
   require 'plugins.vista',

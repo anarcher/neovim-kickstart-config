@@ -1,8 +1,7 @@
 return {
   'olimorris/codecompanion.nvim',
-  -- Upgraded to v18.2.1 for codecompanion-history.nvim compatibility
   -- v18.0.0 breaking change: 'strategies' renamed to 'interactions'
-  tag = 'v18.2.1',
+  tag = 'v18.6.0',
   opts = {},
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -10,8 +9,50 @@ return {
     'ravitemer/codecompanion-history.nvim',
   },
   config = function()
+    local helpers = require 'codecompanion.adapters.acp.helpers'
+
     require('codecompanion').setup {
       adapters = {
+        acp = {
+          pi = {
+            name = 'pi',
+            formatted_name = 'Pi',
+            type = 'acp',
+            roles = {
+              llm = 'assistant',
+              user = 'user',
+            },
+            opts = {
+              vision = true,
+            },
+            commands = {
+              default = { 'npx', '-y', 'pi-acp' },
+            },
+            defaults = {
+              mcpServers = {},
+              timeout = 20000,
+            },
+            parameters = {
+              protocolVersion = 1,
+              clientCapabilities = {
+                fs = { readTextFile = true, writeTextFile = true },
+              },
+              clientInfo = {
+                name = 'CodeCompanion.nvim',
+                version = '1.0.0',
+              },
+            },
+            handlers = {
+              setup = function(self)
+                return true
+              end,
+              form_messages = function(self, messages, capabilities)
+                return helpers.form_messages(self, messages, capabilities)
+              end,
+              on_exit = function(self, code) end,
+            },
+          },
+        },
         http = {
           gemini = function()
             return require('codecompanion.adapters').extend('gemini', {
@@ -24,7 +65,7 @@ return {
       },
       interactions = {
         chat = {
-          adapter = 'claude_code',
+          adapter = 'pi',
           keymaps = {
             send = {
               modes = {
@@ -41,10 +82,10 @@ return {
           },
         },
         inline = {
-          adapter = 'claude_code',
+          adapter = 'pi',
         },
         cmd = {
-          adapter = 'claude_code',
+          adapter = 'pi',
         },
       },
       extensions = {
