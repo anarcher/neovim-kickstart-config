@@ -48,6 +48,7 @@ require('lazy').setup {
   require 'plugins.texpresso',
   -- require 'plugins.vgit', instead use neogit
   require 'plugins.neogit',
+  require 'plugins.diffview',
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
   require 'plugins.code-bridge',
