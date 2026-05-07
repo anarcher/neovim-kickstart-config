@@ -13,7 +13,7 @@ return {
             pattern = { "helm" },
             callback = function()
                 -- Disable all diagnostics for the current buffer
-                vim.diagnostic.disable(0)
+                vim.diagnostic.enable(false, { bufnr = 0 })
             end,
         })
     end,
