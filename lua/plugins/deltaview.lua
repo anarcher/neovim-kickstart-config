@@ -10,9 +10,9 @@ return {
     'Delta',
   },
   keys = {
-    { '<leader>dl', desc = 'Deltaview: Inline diff (current file)' },
-    { '<leader>dm', desc = 'Deltaview: Modified files picker' },
-    { '<leader>da', desc = 'Deltaview: Diff with context' },
+    { '<leader>Dl', desc = 'Deltaview: Inline diff (current file)' },
+    { '<leader>Dm', desc = 'Deltaview: Modified files picker' },
+    { '<leader>Da', desc = 'Deltaview: Diff with context' },
   },
   config = function()
     require('deltaview').setup {
