@@ -10,9 +10,9 @@ return {
     'Delta',
   },
   keys = {
-    { '<leader>Dl', desc = 'Deltaview: Inline diff (current file)' },
-    { '<leader>Dm', desc = 'Deltaview: Modified files picker' },
-    { '<leader>Da', desc = 'Deltaview: Diff with context' },
+    { '<leader>gd', '<cmd>Delta<cr>', desc = 'Deltaview: Diff all modified (one buffer)' },
+    { '<leader>gdv', '<cmd>DeltaView<cr>', desc = 'Deltaview: Inline diff (current file)' },
+    { '<leader>gdm', '<cmd>DeltaMenu<cr>', desc = 'Deltaview: Modified files picker' },
   },
   config = function()
     require('deltaview').setup {
@@ -22,6 +22,11 @@ return {
       fzf_threshold = 0,
       line_numbers = false,
       fzf_picker = nil,
+      keyconfig = {
+        dm_toggle_keybind = '<leader>gdm',
+        dv_toggle_keybind = '<leader>gdv',
+        d_toggle_keybind = '<leader>gd',
+      },
     }
   end,
 }
