@@ -35,6 +35,7 @@ return { -- Highlight, edit, and navigate code
       'zig',
       'jsonnet',
       'odin',
+      'helm',
     },
     auto_install = true,
     highlight = { enable = true },
