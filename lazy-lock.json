@@ -13,7 +13,7 @@
   "codecompanion-history.nvim": { "branch": "main", "commit": "bc1b4fe06eaaf0aa2399be742e843c22f7f1652a" },
   "codecompanion.nvim": { "branch": "main", "commit": "d5b129c65b243a368871dc3f2705642467995c0d" },
   "delta.lua": { "branch": "main", "commit": "840fb6c9e5bf957915ddbeafffa4c0f839f1f8c2" },
-  "deltaview.nvim": { "branch": "main", "commit": "4b8cfe11d2d55a1131ef6be03c72d6cffaa6b8d0" },
+  "deltaview.nvim": { "branch": "main", "commit": "8940ac8340987ca4efafd386521c2c21b3ca79ae" },
   "fidget.nvim": { "branch": "main", "commit": "889e2e96edef4e144965571d46f7a77bcc4d0ddf" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "fzf": { "branch": "master", "commit": "06e70570e2088605d61f18b127356e5680f7f599" },

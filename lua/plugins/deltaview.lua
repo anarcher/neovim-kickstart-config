@@ -17,9 +17,6 @@ return {
   config = function()
     require('deltaview').setup {
       use_nerdfonts = true,
-      show_verbose_nav = false,
-      quick_select_view = 'hsplit',
-      fzf_threshold = 0,
       line_numbers = false,
       fzf_picker = nil,
       keyconfig = {
