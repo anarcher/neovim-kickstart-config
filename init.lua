@@ -35,7 +35,7 @@ require('lazy').setup {
   -- require 'plugins.ai', uses codecompanion
   require 'plugins.codecompanion',
   -- require 'plugins.claude-code', instead use codecompanion
-  require 'plugins.pi-nvim',
+  -- require 'plugins.pi-nvim', rarely used, sidekick covers AI CLIs
   require 'plugins.vista',
   require 'plugins.oil',
   require 'plugins.aerial',
@@ -52,6 +52,7 @@ require('lazy').setup {
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
   require 'plugins.code-bridge',
+  require 'plugins.sidekick',
   require 'plugins.sidekick-zen',
 }
 
