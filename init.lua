@@ -52,6 +52,7 @@ require('lazy').setup {
   require 'plugins.tagbar',
   require 'plugins.helm-ls',
   require 'plugins.code-bridge',
+  require 'plugins.sidekick-zen',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
