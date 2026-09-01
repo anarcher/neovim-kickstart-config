@@ -1,46 +1,62 @@
+local ensure_installed = {
+  'lua',
+  'python',
+  'javascript',
+  'typescript',
+  'vimdoc',
+  'vim',
+  'regex',
+  'terraform',
+  'sql',
+  'dockerfile',
+  'toml',
+  'json',
+  'java',
+  'groovy',
+  'go',
+  'gotmpl',
+  'gitignore',
+  'graphql',
+  'yaml',
+  'make',
+  'cmake',
+  'markdown',
+  'markdown_inline',
+  'bash',
+  'tsx',
+  'css',
+  'html',
+  'c',
+  'rust',
+  'zig',
+  'jsonnet',
+  'odin',
+  'helm',
+}
+
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  branch = 'main', -- The legacy master branch is incompatible with Neovim 0.12.
+  lazy = false,
   build = ':TSUpdate',
-  opts = {
-    ensure_installed = {
-      'lua',
-      'python',
-      'javascript',
-      'typescript',
-      'vimdoc',
-      'vim',
-      'regex',
-      'terraform',
-      'sql',
-      'dockerfile',
-      'toml',
-      'json',
-      'java',
-      'groovy',
-      'go',
-      'gotmpl',
-      'gitignore',
-      'graphql',
-      'yaml',
-      'make',
-      'cmake',
-      'markdown',
-      'markdown_inline',
-      'bash',
-      'tsx',
-      'css',
-      'html',
-      'c',
-      'rust',
-      'zig',
-      'jsonnet',
-      'odin',
-      'helm',
-    },
-    auto_install = true,
-    highlight = { enable = true },
-    indent = { enable = true },
-  },
+  config = function()
+    local treesitter = require 'nvim-treesitter'
+
+    -- The rewritten main branch no longer has ensure_installed/auto_install modules.
+    treesitter.install(ensure_installed)
+
+    vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('kickstart-treesitter', { clear = true }),
+      callback = function(event)
+        local filetype = vim.bo[event.buf].filetype
+        local language = vim.treesitter.language.get_lang(filetype) or filetype
+
+        if pcall(vim.treesitter.start, event.buf, language) then
+          vim.bo[event.buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+        end
+      end,
+    })
+  end,
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --
