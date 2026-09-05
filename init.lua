@@ -42,8 +42,8 @@ require('lazy').setup {
   require 'plugins.colortheme-melange',
   require 'plugins.neotest',
   require 'plugins.jsonnet',
-  -- require 'plugins.codeium', uses supermaven
-  require 'plugins.supermaven',
+  -- require 'plugins.codeium', disabled
+  -- require 'plugins.supermaven', disabled
   require 'plugins.treesitter-context',
   require 'plugins.texpresso',
   -- require 'plugins.vgit', instead use neogit
