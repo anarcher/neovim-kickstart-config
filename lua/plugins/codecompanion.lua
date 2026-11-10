@@ -1,7 +1,7 @@
 return {
   'olimorris/codecompanion.nvim',
-  -- v18.0.0 breaking change: 'strategies' renamed to 'interactions'
-  tag = 'v18.6.0',
+  -- Includes the migration from deprecated vim.validate(table) calls.
+  tag = 'v19.13.0',
   opts = {},
   dependencies = {
     'nvim-lua/plenary.nvim',
